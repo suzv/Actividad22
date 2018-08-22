@@ -13,6 +13,24 @@
   </head>
 
   <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+
+
+
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+          <li><%= link_to 'Index', root_path %>   <br>  </li>
+      </li>
+      <li class="nav-item">
+        <li ><%= link_to 'Landing', pages_landing_path  %>   <br></li>
+      </li>
+
+    </ul>
+
+  </div>
+</nav>
     <%= yield %>
   </body>
 </html>
