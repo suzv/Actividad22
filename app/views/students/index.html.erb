@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></p>
 
+<div class="col-md-10">
+
+
 <h1>Students</h1>
 
 <table>
@@ -13,17 +16,18 @@
 
   <tbody>
     <% @students.each do |student| %>
-      <tr>
-        <td><%= student.name %></td>
+    <tr class="table-active">
+       <th scope="row"></th>
+        <td ><%= student.name %></td>
         <td><%= student.age %></td>
-        <td><%= link_to 'Show', student %></td>
-        <td><%= link_to 'Edit', edit_student_path(student) %></td>
-        <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td> <button type="button" class="btn btn-primary"><%= link_to 'Show', student %></button></td>
+        <td><button type="button" class="btn btn-success"><%= link_to 'Edit', edit_student_path(student) %></button></td>
+        <td><button type="button" class="btn btn-danger"><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
+</div>
 <br>
 
 <%= link_to 'New Student', new_student_path %>
